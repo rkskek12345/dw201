@@ -10,7 +10,7 @@ window.onload=function(){
 
             if( e.keyCode<48 || (e.keyCode>57 && e.keycode<97) || e.keyCode>105 ){
                 return;
-            }
+            }// 숫자키와 키패드 숫자 제외한 모든 키를 무시하기위한 if문
             var n = parseInt(this.value);
             if(  !(1<=n && n<=45) ){
                 alert("1~45 숫자만 입력하세요.");
@@ -74,6 +74,8 @@ function data_search(){
         var bonus_str="<span>"+lotto[sel_count][8]+"</span>"; //보너스에 관한 내용변수
         var isBonus=false;
         var win_cnt=0;// 일치여부 갯수 저장 변수
+        var rank=0; //등수
+
         for(var i=0; i<input.length; i++){
             if(input[i].value!=''){
                 var val = input[i].value;
@@ -91,6 +93,15 @@ function data_search(){
                 }
             }
         }
+        switch(win_cnt){
+            case 6: rank=1; break; // 당첨번호일치가 6개면 1등
+            case 5: if(isBonus) rank=2; // 당첨번호일치 5개에 보너스 2등
+                    else rank=3; break; //당첨번호일치가 5개만 3등
+            case 4: rank=4; break; // 당첨번호일치가 4개 4등
+            case 3: rank=5; break; // 당첨번호일치가 3개 5등
+            default:
+                rank="X"; //당첨번호가 2개이하면 X
+        }
         if(isBonus){
             bonus_str = "<strong class='red'>"+lotto[sel_count][8]+"</strong>";
             win_cnt = win_cnt!=6 ? win_cnt+"+Bonus" :win_cnt;
@@ -105,6 +116,9 @@ function data_search(){
             // 여기에 일치 갯수 출력코드 작성 resultNumberSu
             var NumberSu = document.getElementsByClassName("resultNumberSu");
             NumberSu[line-1].innerText=win_cnt;
+
+            var grade = document.getElementsByClassName("resultNumberGrade");
+            grade[line-1].innerHTML=rank;
         }
 
         
