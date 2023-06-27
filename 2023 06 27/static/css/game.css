@@ -1,0 +1,49 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+#wrap{
+    width:1000px;
+    margin: 0 auto;
+    margin-top:50px;
+}
+.start_bt{
+    text-align:center;
+    padding: 20px 0;;
+}
+.start_bt a{
+    text-decoration: none;
+    font-size: 25px;
+    display: inline-block;
+    padding:10px 30px;
+    background: grey;
+    color:#fff;
+}
+#game_board{ margin-top: 30px;}
+#board{
+    border-spacing: 0;
+    margin: 0 auto;
+}
+.Gnum{
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    text-align: center;
+    border: 1px solid gray;
+}
+.Gnum:hover{
+    background: #e5ccaf;
+}
+.Gnum_check{ background: grey;}
+#state_board{ margin: 50px auto;}
+.stnum{
+    width:35px;
+    height:35px;
+    border:1px solid grey;
+    text-align: center;
+}
+.st_check{
+    background: grey;
+    color: #fff;
+}

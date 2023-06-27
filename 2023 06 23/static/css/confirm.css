@@ -1,0 +1,66 @@
+#lotto_data{
+    width:900px;
+    margin:50px auto;
+}
+.search_data{
+    padding:20px 10px;
+}
+.tbl_data{
+    width:900px;
+    border-spacing: 0;
+}
+.col{
+    border-top:2px solid black;
+    background:#ddd;
+    padding:15px 0;
+}
+.tbl_data tr td{
+    border:1px solid #ddd;
+    padding:10px 0;
+    text-align:center;
+}
+.resultNumber{ width:200px;}
+.resultBonus{ width:145px;}
+.resultNumberSu{width:105px;}
+.resultNumberGrade{width:105px;}
+.num_645{
+    width:34px;
+    margin: 0 1px 0 0;
+    text-align: center;
+    height:34px;
+}
+
+#btn_submit{
+    margin:20px 0;
+    text-align: center;
+}
+#btnDefault, #btnSearch{
+    height:40px;
+    line-height:36px;
+    font-weight:500;
+    padding:0 29px;
+}
+#btnDefault{
+    background:#f5f5f5;
+    border:1px solid #ddd;
+}
+#btnSearch{
+    background:#007bc3;
+    color:#fff;
+    border:1px solid #007bc3;
+}
+.red{
+    position: relative;
+    color:red;
+}
+.red::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -1.5px;
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background: #d43301;
+}
