@@ -9,6 +9,7 @@ body{
     grid-template-rows: repeat(3, minmax(80px, auto));
     /*grid-auto-flow:dense; /*row, column, dense, row dense, column dense 자동으로 채워주는거*/
     height:800px;
+    
 }
 .item:nth-child(6){
     z-index:1;
