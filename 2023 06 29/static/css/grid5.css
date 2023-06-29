@@ -1,0 +1,184 @@
+:root{ /*css에서 가상의 변수 || --title-size:20px; font-size: var(--title-size);*/
+    --bs-green:#27a776;
+    --bs-gray:#e9ecef;
+}
+
+*{
+    padding:0;
+    margin:0;
+    color:#fff;
+    background:#000;
+}
+
+#wrap{
+    margin:0 auto;
+    width:1680px;
+    display:grid;
+    justify-content:center;
+    gap:20px;
+    grid-template-columns:1fr;
+    grid-template-rows:70px 380px 2700px 100px;
+}
+
+ul{list-style-type:none;}
+#nav{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    padding:15px;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+.webTitle{
+    font-size:30px;
+}
+.webTitle i{ color:var(--bs-green);}
+
+.menu ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sns{
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap:15px;
+}
+.sns i::before{color:var(--bs-gray);}
+
+#main_text{
+    margin-top:50px;
+    display:grid;
+    justify-content:center;
+    height:250px;
+    grid-template-rows:auto;
+}
+#main_text h2{
+    font-size:40px;
+}
+#main_text p{
+    justify-self:center;
+}
+#main_text a{
+    justify-self:center;
+    background:var(--bs-green);
+    align-self:center;
+    padding:10px 30px;
+    border-radius: 5px;
+}
+
+#section{
+    display:grid;
+    grid-template-columns:repeat(4, 400px);
+    grid-template-rows: repeat(4, 300px);
+    gap:20px;
+}
+.picture{
+    border-radius:5px;
+    overflow:hidden;
+}
+
+.picture:nth-child(1){
+    background:url(../image/img1.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.picture:nth-child(2){
+    background:url(../image/img2.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(3){
+    background:url(../image/img3.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(4){
+    background:url(../image/img4.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(5){
+    background:url(../image/img5.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    grid-column: 3/5;
+    grid-row: 2/4;
+}
+.picture:nth-child(6){
+    background:url(../image/img6.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(7){
+    background:url(../image/img7.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(8){
+    background:url(../image/img8.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(9){
+    background:url(../image/img9.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    grid-column: 1/4;
+    grid-row: 5/7;
+}
+.picture:nth-child(10){
+    background:url(../image/img10.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(11){
+    background:url(../image/img11.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(12){
+    background:url(../image/img12.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(13){
+    background:url(../image/img13.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    grid-column: 3/5;
+    grid-row: 7/10;
+}
+.picture:nth-child(14){
+    background:url(../image/img14.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(15){
+    background:url(../image/img15.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.picture:nth-child(16){
+    background:url(../image/img16.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+}
