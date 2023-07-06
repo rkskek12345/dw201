@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.subway-container{
+    display: flex;
+    gap:10px;
+    width: 100%;
+    margin: 20px;
+}
+.station, .subway-car{
+    width: 100px;
+    height: 50px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.subway-car{
+    background-color: #007bff;
+    color: #fff;
+}
+#info{
+    width: 400px;
+    text-align: center;
+    margin-top:20px;
+}

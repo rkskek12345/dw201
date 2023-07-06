@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="./static/css/subway.css">
+<script src="./static/js/subway.js"></script>
+</head>
+<body>
+    <!--지하철 만들기
+    지하철 역은 총 40개 입니다.
+    지하철은 4대가 운영됩니다
+    화면에 현재 지하철의 위치를 표시 하면 됩니다.
+    3초에 한번씩 현재 지하철의 위치를 표시힙니다.
+    지하철은 4초마다 다음역으로 이동합니다.
+    지하철 1호차량, 2호차량, 3호차량, 4호 차량으로 표기합니다.
+    지하철의 모양은 직각사각형으로 만듭니다.
+    지하철모양을 클릭하면 현재 위치의 정보가 화면에 표시됩니다.
+    역을 클릭하면 가장 가까운 지하철이 몇정거장전에 있는지 표시합니다.
+There are a total of 40 subway stations.
+There are four subways.
+You can display the current location of the subway on the screen.
+The current subway location is displayed once every 3 seconds.
+The subway goes to the next station every 4 seconds.
+Subway No. 1 car, No. 2 car, No. 3 car, and No. 4 car are indicated.
+The shape of the subway is a rectangle.
+If you click on the subway shape, information about your current location will be displayed on the screen.
+Clicking on a station shows how many stops the nearest subway is.
+-->
+    
+    
+    <div class="subway-container">
+        <div class="station" id="station1"></div>
+        <div class="station" id="station2"></div>
+        <div class="station" id="station3"></div>
+        <div class="station" id="station4"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="station"></div>
+        <div class="subway-car" id="subwayCar1"></div>
+        <div class="subway-car" id="subwayCar2"></div>
+        <div class="subway-car" id="subwayCar3"></div>
+        <div class="subway-car" id="subwayCar4"></div>
+    </div>
+    <div id="info"></div>
+</body>
+</html>
