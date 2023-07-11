@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <div id="wrap">
+        <form name="joinf" id="joinf" method="get" action="join_save.html">
+            <div>
+                아이디 <input type="text" name="id" id="id"> <br>
+                비밀번호 <input type="password" name="pw" id="pw"><br>
+                이메일 <input type="email" name="email" id="email"><br>
+                연락처 <input type="text" name="tel" id="tel"><br>
+                생년월일 <input type="date" name="birth" id="birth"><br>
+            </div>
+            <div>
+                <a href="javascript:cancel();">취소</a>
+                <a href="javascript:check();">회원가입</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function check(){
+        var fm = document.joinf;
+        if(fm.id.value==""){
+            alert("아이디를 입력하세요");
+            fm.id.focus();
+        }else if(fm.pw.value==""){
+            alert("비밀번호를 입력하세요");
+            fm.pw.focus();
+        }else if(fm.email.value==""){
+            alert("이메일을 입력하세요");
+            fm.email.focus();
+        }else if(fm.tel.value==""){
+            alert("전화번호를 입력하세요");
+            fm.tel.focus();
+        }else if(fm.birth.value==""){
+            alert("생년월일을 입력하세요");
+            fm.birth.focus();
+        }else{
+            fm.submit();
+        }
+    }
+    function cancel(){
+        location.href="script_object3.html";
+        //로케이션 객체는 주소담당 객체,
+        //로케이션객체를 통해 현재 주소를 변경할 수 있다.
+    }
+</script>
