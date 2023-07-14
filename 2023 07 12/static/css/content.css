@@ -1,0 +1,127 @@
+#content{
+    background:#fff;
+    position:relative;
+    width:100%;
+}
+#main{
+    position:relative;
+    width:100%;
+    color:#333;
+}
+
+.happening{
+    width:98%;
+    margin:0 auto;
+    position:relative;
+    z-index:999;
+    padding-bottom:30px;
+    background:#fff;
+    top:-90px;
+}
+.happening .headline{
+    background:#690;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color: #fff;
+}
+.happening .headline h2{
+    font-size:37px;
+    padding:5px 35px;
+}
+.happening .headline .email_button{
+    padding-right:30px;
+}
+.happening .headline .email_button a{
+    color:#fff;
+    background:#4b7000;
+    display:inline-block;
+    padding:7px 15px;
+    margin-left:15px;
+    font-weight:900;
+}
+
+#slider{
+    margin:15px 14px;
+    position:relative;
+    min-height:200px;
+}
+#slider .viweport{
+    overflow:hidden;
+    position:relative;
+}
+#slider .viweport .eventslide{
+    display:flex;
+    column-gap:20px;
+    width:2496px;
+}
+#slider .viweport .eventslide .slide_item{
+    width:292px;
+    overflow:hidden;
+    position:relative;
+}
+#slider .viweport .eventslide .slide_item a h4{
+    color:#690;
+    font-size:1.35em;
+}
+#slider .viweport .eventslide .slide_item b{
+    color:#333;
+    border-top:2px solid #ddd;
+    margin-top:4px;
+    display:inline-block;
+    width:100%;
+}
+#slider .viweport .eventslide .slide_item p{
+    margin-top:0.2em;
+    font-size:0.9em;
+    line-height:1.2em; /* em - 부모의 크기기준으로 배율,
+                        rem - html의 font-size 기준 배율적용*/
+}
+/*슬라이드 왼쪽 오른쪽 버튼*/
+#slider .direction-nav .prev{
+    position:absolute;
+    top:90px;
+    left:-20px;
+    background:#f90;
+    font-size:36px;
+    padding:2px;
+    width:50px;
+    height:50px;
+    text-align:center;
+    color:#fff;
+}
+#slider .direction-nav .next{
+    position:absolute;
+    top:90px;
+    right:-20px;
+    background:#f90;
+    font-size:36px;
+    padding:2px;
+    width:50px;
+    height:50px;
+    text-align:center;
+    color:#fff;
+}
+#slider .direction-nav .prev:hover , #slider .direction-nav .next:hover{
+    background:#e68a00;
+    cursor:pointer;
+}
+#slider .viweport .eventslide{
+    position:relative;
+    left:0;
+    transition:left 1s ease;
+}
+/*
+    하나씩 슬라이드 이동
+    ul태그에 position: relativ; left: -312px;
+
+    한번에 이동
+    ul태그에 tranform: translate3d(-936px,0px,0px);
+*/
+
+.homebottom{
+
+}
+.homesocial{
+
+}
