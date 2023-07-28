@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./static/css/default.css">
+    <link rel="stylesheet" href="./static/css/household.css">
+    <script src="./static/household_function.js"></script>
+    <script src="./static/household_object.js"></script>
+
+</head>
+<body>
+    <div id="house_wrap">
+        <header id="header">
+            <div id="hold_input">
+                <div class="item">
+                    <input type="datetime-local" name="wdate" id="wdate">
+                </div>
+                <div class="item">
+                    <label class="item_title" for="wmoney">금액</label>
+                    <input type="text" name="wmoney" id="wmoney">
+                </div>
+                <div class="item">
+                    <label class="item_title">분류</label>
+                    <select id="wcategory"></select>
+                </div>
+                <div class="item">
+                    <label class="item_title" for="wdetail">내용</label>
+                    <input type="text" name="wdetail" id="wdetail">
+                </div>
+                <div class="item getcome">
+                    
+                    <div class="expense">
+                        <label class="getcome_title">결제방법</label>
+                        <input type="radio" name="payment" id="Scash"><label for="Scash">현금</label>
+                        <input type="radio" name="payment" id="Scard"><label for="Scard">카드</label>
+                        <select id="mycard" class="hide"></select>
+                    </div>
+                    <div class="income hide">
+                        <label class="getcome_title">수입</label>
+                        <input type="radio" name="income_method" id="income_bank"><label for="income_bank">계좌</label>
+                        <input type="radio" name="income_method" id="income_cash"><label for="income_cash">현금</label>
+                        <select id="mybank" class="hide"></select>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+        <section id="hold_bt_wrap">
+            <button id="income_bt">수입</button> <button id="expense_bt">지출</button>
+            <br>
+            <button id="write_bt">등록</button>
+        </section>
+        <section id="hold_list_wrap">
+            
+            <div id="list_left">
+                <table class="left_table">
+                    <thead>
+                        <tr>
+                            <th class="day">날짜</th>
+                            <th class="income_money">수입</th>
+                            <th class="expense_money">지출</th> 
+                            <th class="detail">내용</th>
+                            <th class="category">분류</th>
+                            <th class="how">결제방법</th>
+                        </tr>
+                    </thead>
+                    <tbody id="left_t"></tbody>
+                </table>
+            </div>
+            <div id="list_right">
+                <table class="right_table">
+                    <thead>
+                        <tr>
+                            <th class="day">날짜</th>
+                            <th class="income_money">수입</th>
+                            <th class="expense_money">지출</th> 
+                            <th class="detail">내용</th>
+                            <th class="category">분류</th>
+                            <th class="how">결제방법</th>
+                        </tr>
+                    </thead>
+                    <tbody id="right_t"></tbody>
+                </table>
+            </div>
+
+        </section>
+        <section id="loan_wrap">  <!-- 대출 내역-->
+
+        </section>
+    </div>
+</body>
+</html>

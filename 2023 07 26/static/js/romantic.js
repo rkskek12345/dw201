@@ -65,7 +65,20 @@ function screen_show(){
     }
 }
 function resave_list(){
-    list[0].place=
+    var place=document.querySelector("#re_place");
+    var money=document.querySelector("#re_money");
+    var period=document.querySelector("#re_period");
+    var stf=document.querySelector("#re_satisfaction");
+
+    if ( value_check( [place,money,period]) ) return
+
+    var idx = this.parentNode.dataset.idx;
+    list[idx].place=place.value;
+    list[idx].money=money.value;
+    list[idx].period=period.value;
+    list[idx].satisfaction=stf.options[stf.selectedIndex].value;
+    
+    //화면출력
     screen_show();
 }
 function update_list(){
