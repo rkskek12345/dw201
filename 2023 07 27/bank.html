@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        function bank(name, money, account_num){ //생성자 함수
+            this.name=name;
+            this.money=money;
+            this.account=account_num;
+        }
+        const bank_list = new Array(); //bank 객체를 저장할 배열
+        function save(){
+            var name = document.querySelector("#name");
+            var money = document.querySelector("#money")
+            var account_num = document.querySelector("#account");
+
+            bank_list.push(new bank(name.value, money.value, account_num.value));
+            name.value='';
+            money.value='';
+            account_num.value='';
+            name.focus();
+
+            var out = document.getElementById("output");
+
+            var i= bank_list.length-1;
+            var div = document.createElement("div");
+            div.innerHTML = bank_list[i].name+" "+bank_list[i].money+" "+
+                                bank_list[i].account_num;
+            out.appendChild(div);
+
+            // var html="";
+            // for(var i in bank_list){
+            //     html += "<div>"+bank_list[i].name+" "+bank_list[i].money+" "+
+            //         bank_list[i].account_num+"</div>";
+            // }
+            // out.innerHTML=html;
+        }
+    </script>
 </head>
 <body>
+    <div id="input">
+        은행<input type="text" id="name">
+        잔액<input type="text" id="money">
+        계좌번호<input type="text" id="account">
+        <br>
+        <button onclick="save()">등록</button>
+    </div>
+    <div id="output">
+
+    </div>
     <!--
         4시 40분 20초 부터 시작하여 완료 된 사람은 고 홈
         bank 객체 - 속성( bank_name-은행이르므 money-잔액, account_num-계좌번호)
