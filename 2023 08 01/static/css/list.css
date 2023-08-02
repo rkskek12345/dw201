@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#wrap{
+    width: 1200px;
+    margin: 50px auto;
+}
+#search_wrap{
+    display: flex;
+    justify-content: center;
+    padding-bottom:10px;
+}
+#keyword{
+    width: 300px;
+}
+li{list-style-type: none;}
+#data_box{
+    width: 100%;
+}
+#data_list{
+    text-align: center;
+}
+.data{
+    display: inline-block;
+}

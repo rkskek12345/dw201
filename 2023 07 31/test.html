@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--
+        주메뉴
+            html , css, javascript
+        각 주메뉴의 서브 메뉴
+            html -> div, p, form, input, legend, filedset
+            css -> position, background, opacity, transform
+            javascript -> 변수, 함수, 배열, 제어문
+
+        처음 화면에는 주메뉴만 보인다.
+        각 주메뉴를 클릭하면 해당 메뉴의 서브 메뉴가 펼쳐져서 보여야 한다.
+        (배경색 각각 다르게 줘서 만들고 최대한 css 적용 해보기)
+    -->
+    <style>
+    ul{list-style-type: none; margin: 0;}
+    #html{width: 250px; background: green; }
+    #html p{font-size: 25px; text-align: center; margin: 0;}
+    #html_list{width: 250px; background: tomato; display: none;}
+    #css{width: 250px; background: rgb(36, 150, 36); }
+    #css p{font-size: 25px; text-align: center; margin: 0;}
+    #css_list{width: 250px; background: cadetblue; display: none;}
+    #javascript{width: 250px; background: rgb(65, 173, 65); }
+    #javascript p{font-size: 25px; text-align: center; margin: 0;}
+    #js_list{width: 250px; background: gold; display: none;}
+    </style>
+    <div id="wrap">
+        <div id="html">
+            <p>HTML</p>
+            <div id="html_list">
+                <ul>
+                    <li>div</li>
+                    <li>p</li>
+                    <li>foem</li>
+                    <li>input</li>
+                    <li>legend</li>
+                    <li>filedset</li>
+                </ul>
+            </div>
+        </div>
+        <div id="css">
+            <p>CSS</p>
+            <div id="css_list">
+                <ul>
+                    <li>position</li>
+                    <li>background</li>
+                    <li>opacity</li>
+                    <li>transform</li>
+                </ul>
+            </div>
+        </div>
+        <div id="javascript">
+            <p>JAVASCRIPT</p>
+            <div id="js_list">
+                <ul>
+                    <li>변수</li>
+                    <li>함수</li>
+                    <li>배열</li>
+                    <li>제어문</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+       
+
+    <script>
+        $("#html").click(function(){
+            $("#html_list").slideToggle(1000);
+        });
+        $("#css").click(function(){
+            $("#css_list").slideToggle(1000);
+        });
+        $("#javascript").click(function(){
+            $("#js_list").slideToggle(1000);
+        });
+    </script>
+</body>
+</html>

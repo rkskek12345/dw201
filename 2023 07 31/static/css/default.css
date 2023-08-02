@@ -1,0 +1,41 @@
+
+ul{list-style-type: none;}
+
+#wrap{
+    position:relative;
+    width:600px;
+    height: 50px;
+    margin:0 auto;
+    background:#fff;
+    background: thistle;
+}
+#menu_wrap{
+    display: flex;
+    position: relative;
+}
+#menu_list{
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    display: none;
+    font-size: 15px;
+    top:34px;
+    background: rgb(90, 44, 90);
+    z-index: 100;
+}
+#menu_list li{
+    margin-left: 10px;
+}
+#logo_wrap{
+    position: absolute;
+    top:0;
+    right:0px;
+}
+#section{
+    position: absolute;
+    top:70px;
+}
+#menu_wrap .menu_show{
+    z-index: 10;
+    width: 100%;
+}

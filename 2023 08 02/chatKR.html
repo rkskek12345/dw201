@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="./static/css/chat.css">
+<script src="./static/js/chat.js"></script>
+</head>
+<body>
+    
+    <div id="wrap">
+        <div id="chat_input_box">
+            <div class="chat_input">
+                작성자 : <input type="text" name="writer" id="writer">
+            </div>
+            <div class="chat_input">
+                내용 : <textarea id="content"></textarea>
+            </div>
+            <div class="chat_input input_bt">
+                <a href="javascript:send();"><i class="bi bi-send"></i></a>
+            </div>
+        </div>
+        <div id="chat_list_box">
+            <ul id="chat_list">
+                <li class="chat">
+                    <div class="write_info">
+                        <b class="name">관리자</b>
+                        <span class="data">2333-03-03 03:33:33</span>
+                    </div>
+                    <div class="content">작성자입력은 필수입니다.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
