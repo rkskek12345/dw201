@@ -1,5 +1,18 @@
-$(function(){
+let re = 0;
 
+$(function(){
+    $.getJSON("http://krdrive.ipdisk.co.kr:8000/test/data.php",function(data){
+        chat_show(data);
+    });
+
+    re =setTimeout(function(){
+        location.reload();
+    },10000);
+});
+
+$(document).on("keyup",function(){
+    if(re!=0)
+        clearTimeout(re);
 });
 
 function send(){
@@ -15,15 +28,16 @@ function send(){
         var data = this.response;
         if(data==="fail")
             alert("다시 입력하세요")
-        else    chat_show(data);
+        else    chat_show(JSON.parse(data));
     };
     xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xmlHttp.send("x="+send_data);
 // send() - 서버에 데이터 보내는 곳
+    re =setTimeout(function(){
+        location.reload();
+    },10000);
 }
 function chat_show(data){
-    data = JSON.parse(data);
-
     var out="";
     $.each(data,function(i,item){
         out += "<li class=chat><div class='write_info'><b class='name'>"+item.writer+
@@ -34,4 +48,5 @@ function chat_show(data){
     $("#chat_list").html(out);
     $("#content").val('');
     $("#content").focus();
+    
 }
