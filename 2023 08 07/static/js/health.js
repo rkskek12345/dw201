@@ -35,14 +35,7 @@ $(async function(){
     // 전체 텍스트에 대한 검색이 아니라
     // 소재지주소와 업무내용에 한해서만  검색이 가능하게 변경하시오
     $("#searchWord").on("keyup",function(){
-        const word = $(this).val();
-        $(".item_short").filter(function(){
-            var addr = $(this).find(".item_detail").children("li:eq(1)");
-            var task = $(this).find(".item_detail").children("li:eq(2)");
-            var hasAddr = addr.text().indexOf(word) > -1;
-            var hasTask = task.text().indexOf(word) > -1;
-            $(this).toggle( hasAddr || hasTask );
-        });
+            search();
     });
 
 
@@ -67,7 +60,75 @@ addr:"소재지도로명주소" , nurseCount:"간호사수", doctorCount:"의사
            
     });
 
+    /* 상세검색 부분*/
+    $("input[type=checkbox]").change(function(){
+        search();
+    });
+    $("input[type=radio]").change(function(){
+        search();
+    });
+
 });
+
+function search(){
+    const word = $("#searchWord").val();
+    let classify=new Array();
+    let location=new Array();
+    let task=new Array();
+    let nurse=new Array();
+    let social=new Array();
+    $("input[name=classify]:checked").each(function(){ classify.push($(this).val());});
+    $("input[name=location]:checked").each(function(){ location.push($(this).val());});
+    $("input[name=task]:checked").each(function(){ task.push($(this).val());});
+    $("input[name=nurse]:checked").each(function(){ nurse.push($(this).val());});
+    $("input[name=social]:checked").each(function(){ social.push($(this).val());});
+
+    $(".item_short").filter(function(){
+
+        var isShow=true;
+        var idx = $(this).index();
+
+        if(word!=''){
+            var addr = $(this).find(".item_detail").children("li:eq(1)");
+            var task1 = $(this).find(".item_detail").children("li:eq(2)");
+            var hasAddr = addr.text().indexOf(word) > -1;
+            var hasTask = task1.text().indexOf(word) > -1;
+            isShow= hasAddr || hasTask;
+        }
+
+        if(classify.length!=0 && isShow){
+            if ( classify.indexOf(data_list[idx].건강증진센터구분) == -1) isShow=false;
+        }
+        if(location.length!=0 && isShow){
+            isShow=false;
+            for(var i=0; i< location.length; i++){
+                if( data_list[idx].소재지도로명주소.indexOf(location[i]) > -1){
+                    isShow=true; break;
+                }
+            }
+        }
+        if(task.length!=0 && isShow){
+            isShow=false;
+            for(var i=0; i< task.length; i++){
+                if( data_list[idx].건강증진업무내용.indexOf(task[i]) > -1){
+                    isShow=true; break;
+                }
+            }
+        }
+        if(nurse.length!=0 && isShow){ // 간호사수 상세검색
+            if (Number(data_list[idx].간호사수) >= Number(nurse[0])) isShow=true;
+            else isShow=false;
+        }
+        if(social.length!=0 && isShow){
+            if(Number(data_list[idx].사회복지사수) >= Number(social[0])) isShow;
+            else isShow=false;
+        }
+        
+
+
+        $(this).toggle( isShow );
+    });
+}
 
 function view(data_list){
     $("#section").empty();
