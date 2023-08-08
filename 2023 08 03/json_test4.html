@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        #option{
+        display:flex;
+        width:400px;
+        justify-content: space-around;
+        margin:0 auto;
+        }
+        #list{
+            width:400px;
+            margin:0 auto;
+        }
+        #sort_age, #sort_addt{
+            cursor: pointer;
+            border:1px solid black;
+        }
+        .asc .bi-arrow-down{
+            display:none;
+        }
+        .dasc .bi-arrow-up{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="option">
+        <div id="sort_age" class="asc">나이<i class="bi bi-arrow-up"></i><i class="bi bi-arrow-down"></i></div>
+        <div id="sort_addt" class="dasc">사는곳<i class="bi bi-arrow-up"></i><i class="bi bi-arrow-down"></i></div>
+    </div>
+    <table id="list">
+        <thead>
+            <th>이름</th><th>나이</th><th>주소</th>
+        </thead>
+        <tboy id="person"></tboy>
+    </table>
+</body>
+</html>
+
+<script>
+    /*
+        1. 아이콘은 오름차순만 표시하기
+        2. 나이 또는 사는곳을 클릭하면 현재 아이콘의 반대 아이콘으로 표시하기
+        3. 현재 화면에 표시되는 아이콘에 맞춰서 정렬된 데이터들이 화면에 출력될수 있게 만들기
+    */
+    const arr=[  ["정예림",24,"중리동"], ["신상수",29,"대흥동"],
+["김승겸",30,"은행동"], ["임민지",28,"문화동"],["이상준",33,"선화동"],
+["김선향",34,"가양동"],["송은선",21,"태평동"]  ];
+
+data_view();
+
+function data_view(){
+    $("#person").empty();
+    $.each(arr,function(i,data){
+        $("#person").append("<tr><td>"+data[0]+"</td><td>"+data[1]+"</td><td>"+
+            data[2]+"</td></tr>");
+    });
+}
+
+$("#sort_age").click(function(){ //나이 클릭
+    $(this).toggleClass("asc");  //오름차순 아이콘 표시
+    $(this).toggleClass("dasc"); //내림차순 아이콘
+    var has = -1;
+    if( $(this).hasClass("asc") ) has=1;
+    arr.sort(function(a,b){
+        return  (a[1] - b[1]) * has;
+    });
+
+    data_view();
+});
+
+$("#sort_addt").click(function(){  //주소 클릭
+    $(this).toggleClass("asc");  //오름차순 아이콘
+    $(this).toggleClass("dasc"); //내림차순 아이콘
+    var has = -1;
+    if( $(this).hasClass("asc") ) has=1;
+    arr.sort(function(a,b){
+        if( a[2] < b[2] ) return -1*has;
+        if( a[2] > b[2] ) return 1*has;
+        if(a[2]===b[2]) return 0*has;
+    });
+
+    data_view();
+});
+
+
+
+
+
+
+// const arr=[5,4,3,12,7,1,9];
+
+// //삽입
+// for(var i=0; i<arr.length-1; i++){ // 첫번째 위치에서 부터 비교를 해야 하기에 0부터
+//     for(var k= i+1; k<arr.length; k++){
+//         if( arr[i] > arr[k]){
+//             temp = arr[i];
+//             arr[i] = arr[k];
+//             arr[k] = temp;
+//         }
+//     }
+// }
+
+//버블
+// for(var i=1; i<arr.length-1; i++){ // 총 데이터갯수의 -1 만큼 반복
+//     for(var k=0; k<arr.length-i; k++){ // 첫번째 for문이 한번 반복할 떄 마다 배열의 끝부분부터
+//         // 정렬이 완료 되기 때문에 비교 대상을 하나씩 감속
+//         if( arr[k] - arr[k+1] >0){
+//             var temp = arr[k];
+//             arr[k] = arr[k+1];
+//             arr[k+1]=temp;
+//         }
+//     }
+// }
+// console.log(arr);
+
+
+    //  $.each(arr,function(i,data){
+    //      $("#before").append("<div>"+data+"</div>");
+    //  });
+
+    // for(var i=1; i<arr.length-1; i++){
+    //     for(var k=0; k<arr.length-i; k++){
+    //         if( arr[k][1] > arr[k+1][1]){
+    //             temp = arr[k];
+    //             arr[k] = arr[k+1];
+    //             arr[k+1] == temp;
+    //         }
+    //     }
+    // }
+    //     arr.sort(function(a,b){
+    //         if( a[2] < b[2]) return -1;
+    //         if( a[2] > b[2]) return 1 ;
+    //         if(a[2]===b[2]) return 0;
+    //     })
+
+    //  $.each(arr,function(i,data){
+    //      $("#after").append("<div>"+data+"</div>")
+    //  });
+
+    // arr.sort(function(a,b){
+    //     if(a < b) return 1;
+    //     if(a > b) return -1;
+    //     if(a === b) return 0;
+    // });
+
+    // $.getJSON("./전국건강증진센터표준데이터.json",function(data){
+    //     console.log(data);
+
+    //     var keySet = Object.keys(data.records[0]);
+    //     console.log(keySet);
+
+    //     console.log(data.records[2][keySet[0]]);//data.records[0].
+
+    //     var search = data.records.filter(item => item[keySet[14]] >=3);
+    //     console.log(search);
+        // $.each(data.records,function(){
+        //     console.log(item);
+        //     var search = item.filter((kv) => v==="건강증진");
+
+        //     console.log(search);
+        // });
+    // });
+</script>
