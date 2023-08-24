@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <style>
+        #wrap{width: 500px; margin: 0 auto;}
+        #content{width: 500px; border-collapse: collapse;}
+        #content th{border: 1px solid black;}
+        #content td{border: 1px solid #aaa;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="input_box">
+            <input type="text" name="keyword" id="keyword">
+            <button id="bt">검색</button>
+        </div>
+        <div id="list">
+            <table id="content">
+                <thead>
+                    <th>식당</th> <th>메뉴</th>
+                </thead>
+                <tbody id="abc">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $.getJSON("./data/test1.json",function(d){
+        //console.log(d);
+
+        var key_arr = Object.keys(d);
+
+        $.each(key_arr, function(a,b){
+            $("#abc").append("<tr class='data_row'><td class='name'>"+b+"</td><td class='state'>"+d[b]+"</td></tr>");
+        })
+    });
+    $("#bt").click(function(){ 
+        var word = $("#keyword").val();
+        
+        
+        $("#abc>tr").filter(function(idx){
+            flag= $(this).text().indexOf(word) > -1;
+            $(this).toggle(flag);
+        });
+        
+    });
+</script>
