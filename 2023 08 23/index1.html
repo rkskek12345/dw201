@@ -21,24 +21,19 @@
             <input type="text" id="word">
             <h3>분류</h3>
             <ul id="category">
-                <li><input type='checkbox' name='category' value='교통'>교통</li>
-                <li><input type='checkbox' name='category' value='외식'>외식</li>
-                <li><input type='checkbox' name='category' value='영화'>영화</li>
-                <li><input type='checkbox' name='category' value='편의점'>편의점</li>
-                <li><input type='checkbox' name='category' value='마트'>마트</li>
-                <li><input type='checkbox' name='category' value='의료'>의료</li>
-                <li><input type='checkbox' name='category' value='유흥'>유흥</li>
-                <li><input type='checkbox' name='category' value='용돈'>용돈</li>
-                <li><input type='checkbox' name='category' value='국비'>국비</li>
-                <li><input type='checkbox' name='category' value='국취제'>국취제</li>
-                <li><input type='checkbox' name='category' value='기타'>기타</li>
-                <li><input type='checkbox' name='category' value='주식배당금'>주식배당금</li>
+                
             </ul>
             <h3>금액</h3>
             <input type="number" id="money"> 이하
+            <div id="bt_box">
+                <a href="javascript:showList();">List</a>
+                <a href="javascript:showChart();">Chart</a>
+            </div>
         </div>
-        <div id="main">
-
+        <div id="main">        </div>
+        <div id="mychart" style="display: none;">
+            <canvas id="mycanvas" width="500" height="400"></canvas>
+            <canvas id="incomeChart" width="500" height="400"></canvas>
         </div>
     </div>
 </body>

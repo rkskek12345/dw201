@@ -72,3 +72,20 @@ ul{list-style-type: none;}
 .detail:nth-child(even){
     background:#ddd;
 }
+#bt_box{
+    display: flex;
+    justify-content: space-between;
+}
+#bt_box a{
+    color: #222845; font-weight: 800; font-size: 20px;
+    text-decoration: none; border: 1px solid black;
+    background: rgb(46, 209, 147); border-radius: 5px;
+    width: 80px;
+    padding: 5px 0;
+    text-align: center;
+}
+#bt_box a:hover{color: rgb(46, 209, 147); background: black; border: 1px solid rgb(46, 209, 147);}
+#mychart{
+    width: 500px;
+    height: 400px;
+}
