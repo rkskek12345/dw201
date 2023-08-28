@@ -18,6 +18,7 @@ $(function(){
         if(gamer.length>0){
             //console.log(gamer);
             $("#dice_bt").attr('disabled',false);
+            draw(); //참가수 만큼 말 그리기
             clearInterval(t);
         }
     }, 50);

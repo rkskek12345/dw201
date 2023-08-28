@@ -36,9 +36,13 @@ function initBoard(){
     console.log(areas);
     $("#board_container").css("grid-template-areas",areas);
 }
-
+const gcolor=["#6A5ACD","#55EE94","#FF7A85","#FFC81E","#DB631F"];
 function draw(){
 //보드 그리기
+    var gidx=Object.values(gamer); //참가자 번호 만 배열로 가져오기
+    $.each(gidx,function(i,p){
+        $(".pan").eq(0).append("<svg> </svg>")
+    });
 }
 
 function setOpen(){
