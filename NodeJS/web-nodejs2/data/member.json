@@ -1,0 +1,18 @@
+[
+    {"id":1, "sdmId":"abcd@naver.com", "sdmPw":"1234", "tel":"010-1234-5678",
+"addr":"대전 동구 은행동", "wDate":"2024-04-06"},
+    {"id":2, "sdmId":"efgh@naver.com", "sdmPw":"5678", "tel":"010-5678-1234",
+"addr":"대전 서구 도마동", "wDate":"2024-05-21"},
+    {"id":3, "sdmId":"kim1@naver.com", "sdmPw":"91011", "tel":"010-1472-5836",
+"addr":"대전 서구 둔산동", "wDate":"2024-08-13"},
+    {"id":4, "sdmId":"kim2@naver.com", "sdmPw":"121314", "tel":"010-7894-5612",
+"addr":"대전 서구 갈마동", "wDate":"2024-01-15"},
+    {"id":5, "sdmId":"kim3@naver.com", "sdmPw":"151617", "tel":"010-2468-1011",
+"addr":"대전 중구 태평동", "wDate":"2024-11-09"},
+    {"id":6, "sdmId":"kim4@naver.com", "sdmPw":"181920", "tel":"010-8426-9713",
+"addr":"대전 중구 산성동", "wDate":"2024-07-12"},
+    {"id":7, "sdmId":"kim5@naver.com", "sdmPw":"212223", "tel":"010-7496-1235",
+"addr":"대전 중구 문화동", "wDate":"2024-07-16"},
+    {"id":8, "sdmId":"kim6@naver.com", "sdmPw":"242526", "tel":"010-1596-4789",
+"addr":"대전 대덕구 중리동", "wDate":"2024-06-22"}
+]

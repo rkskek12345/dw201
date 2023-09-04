@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="./src/func.js"></script>
+        <script>
+        $(function(){        
+            var isLogin = getCookie("isLogin");
+            var id= getCookie("id");
+            if(isLogin=="false"){
+                $("#login_result").append('<h2>로그인 실패</h2>'+
+                    '<a href="/login">다시 로그인하기</a>');
+            }else{
+                $("#login_result").append('<h2>로그인 성공</h2>');
+                setTimeout(function(){ //로그인 성공하면 3초뒤 첫페이지 이동
+                    location.href="/"+getCookie("sub");
+                    document.cookie="sub=;"; //expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+                },3000);
+            }
+        });
+        //document.write(isLogin+" "+ id);
+        // parse=function(href){ //url이라는 객체의 prototype에 등록
+        //     var tmp = href.split("?")[1];
+        //     var obj=new Object();
+        //     $.each(tmp.split("&"),function(i,t){ // 파라미터를 객채 형태로 저장
+        //         var param = t.split("=");
+        //         obj[param[0]] = param[1];
+        //     });
+        //     console.log(obj);
+        //     return obj;
+        // }
+        // // 주소에 보면 가끔 %2343%34%2%44 이렇게 표시되는 경우 있죠??
+        // // 특수문자를 주소에서 사용할 수 없기 때문에 사용가능한 문자로 변환한다
+        // // 그 과정이 encode이다. 다시 원래 특수 문자로 변환하려면 decode해야한다.
+        // $.getJSON("./data/member.json",function(member){
+        //     var href = decodeURIComponent(location.href);
+        //     var query= parse(decodeURI(href));
+
+        //     var isSuccess=false;
+        //     $.each(member, function(i,m){
+        //         if(m.sdmId === query.sdmId){
+        //             if(m.sdmPw === query.sdmPw){
+        //                 isSuccess=true
+        //             }
+        //         }
+        //     });
+        //     if(isSuccess) document.write("로그인 성공");
+        //     else document.write("로그인 실패");
+
+        //     //console.log(member);
+        // });
+    </script>
+    <style>
+        body{background: rgb(214, 136, 188); height: 100vh;}
+        #login_result{
+            width: 500px; color: #fff; text-align: center;
+            position: relative;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #login_result h2{font-size: 30px; font-weight: 800;}
+        #login_result a{color: #fff;}
+    </style>
+</head>
+<body>
+    
+    <div id="login_result">
+
+    </div>
+</body>
+</html>

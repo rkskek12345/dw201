@@ -1,0 +1,56 @@
+#content{
+    width: 1000px;
+}
+#content h3{
+    text-align: center;
+    padding-bottom: 15px;
+}
+.login_wrap {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+.login_wrap label {
+    display: block;
+    font-weight: 800;
+    color: black;
+}
+.login_input{
+    display: flex;
+    align-items: center;
+}
+.login_wrap input{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login_box .login_bt a{
+    color: white;
+    text-decoration: none;
+    background: rgb(214, 136, 188);
+    padding: 0px 5px;
+    width: 30.8%;
+    font-size: 15px; font-weight: 800;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+}
+.joinAfind a{
+    position: absolute;
+    left: 450px;
+    top: 284px;
+    color: white;
+    text-decoration: none;
+    background: rgb(214, 136, 188);
+    padding: 0px 5px;
+    width: 11%;
+    font-size: 15px; font-weight: 800;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+}

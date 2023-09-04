@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스드메의모든것</title>
+
+<link rel="stylesheet" href="./src/main.css">
+<link rel="stylesheet" href="./src/sing.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"><a href="/"><img src="./src/logo.jpg"></a></div>
+            <nav class="nav">
+                <ul class="menuList">
+                    <li class="menu"><a href="/studio">스튜디오</a></li>
+                    <li class="menu"><a href="/dress">드레스</a></li>
+                    <li class="menu"><a href="/makeup">메이크업</a></li>
+                    <li class="menu"><a href="/wedding">예식장</a></li>
+                    <li class="menu"><a href="/qa">Q&A</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <section id="content">
+                <h3>스드메 회원가입</h3>
+                <form>
+                    <div id="sing_wrap">
+                        <label for="email">아이디(이메일):</label>
+                        <input type="email" id="email" name="email" required><br>
+
+                        <label for="password">비밀번호:</label>
+                        <input type="password" id="password" name="password" required><br>
+
+                        <label for="phone">연락처:</label>
+                        <input type="tel" id="phone" name="phone" required><br>
+
+                        <label for="address">신혼집 주소:</label>
+                        <input type="text" id="address" name="address" required><br>
+
+                        <label for="weddingDate">결혼 예정일:</label>
+                        <input type="date" id="weddingDate" name="weddingDate"><br>
+
+                        <input type="submit" id="bt" value="가입하기">
+                    </div>
+                </form>
+                <!--
+                    회원가입 양식 만들기
+                    아이디는 이메일로,
+                    비밀번호, 연락처, 신혼집 주소, 결혼예정일
+                    css 작업까지 하기 - sign.css
+                    로그인.html 은 css 작업하기
+                -->
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>

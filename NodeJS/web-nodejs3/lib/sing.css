@@ -1,0 +1,45 @@
+#content{
+    width: 1000px;
+}
+#content h3{
+    text-align: center;
+    padding-bottom: 15px;
+}
+#sing_wrap {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#sing_wrap label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 800;
+    color: black;
+}
+
+#sing_wrap input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#sing_wrap input[type="submit"] {
+    font-size: 15px;
+    background: rgb(214, 136, 188);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+#sing_wrap input[type="submit"]:hover {
+    background-color: #0056b3;
+}
