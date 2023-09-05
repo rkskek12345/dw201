@@ -1,0 +1,30 @@
+#mkimg{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+#mkimg button{
+    background: rgb(214, 136, 188);
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+}
+.make img{
+    width: 250px;
+    height: 300px;
+}
+#side .login_bt{
+    padding: 10px 10px;
+}
+#side .login_bt a{
+    color: white;
+    text-decoration: none;
+    background: rgb(214, 136, 188);
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px; font-weight: 800;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+}

@@ -80,7 +80,7 @@
 .joinAfind a{
     position: absolute;
     left: 450px;
-    top: 284px;
+    top: 353px;
     color: white;
     text-decoration: none;
     background: rgb(214, 136, 188);

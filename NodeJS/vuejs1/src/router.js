@@ -20,6 +20,16 @@ const routes = [
         path:"/qs",
         name:"QuestionWeb",
         component :() => import('@/components/QuestionWeb.vue')
+    },
+    {
+        path:"/dress",
+        name:"DressRoom",
+        component :() => import('@/components/DressRoom.vue')
+    },
+    {
+        path:"/makeup",
+        name:"MakeUp",
+        component :() => import('@/components/MakeUp.vue')
     }
 ];
 
